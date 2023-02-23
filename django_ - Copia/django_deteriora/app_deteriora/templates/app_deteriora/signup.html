@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_hiae.png' %}">
+    
+		<title> Cadastro </title>
+		
+		<link rel="stylesheet" href="{% static 'signup.css'%}">
+
+	</head>
+
+	<body>
+    <div id="rectangle"></div>
+		<div>
+			<img src="{% static 'logo_hiae.png'%}" alt="logo" class="img2">
+		</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <h1>Cadastro</h1>
+        
+      <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <label for="username">Email Institucional:</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="email">Email Institucional:</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="password1">Senha:</label>
+        <input type="password" name="password1" id="password1">
+        <br>
+        <label for="password2">Repita a senha:</label>
+        <input type="password" name="password2" id="password2">
+        <br>
+        <button type="submit">Cadastrar</button>
+      </form>
+      
+      <p>Criando uma conta você concorda com nossos <a href="#">Termos e Privacidade</a>.</p>
+    
+      <p>Já tem uma conta? <a href="login.html">Entre aqui </a>.</p>
+    
+      
+
+    </div>
+	</body>
+
+</html>

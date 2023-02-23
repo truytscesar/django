@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+</head>
+	{% csrf_token %}
+	<button id="my-button">Go to New Page</button>
+    <script>
+      document.getElementById('my-button').addEventListener('click', function() {
+        window.location.href = '/acao_registrada';
+      });
+    </script>
+</html>

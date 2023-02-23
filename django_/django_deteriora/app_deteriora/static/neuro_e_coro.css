@@ -1,0 +1,220 @@
+@media (min-width: 600px) {
+    .nav_size {
+        width: 100%;
+        height: 15%;
+    }
+
+    .nav_logo_size{
+        width: 50%;
+        height: 50%;
+    }
+
+    .img2 {
+        float: right;
+        width: 15%;
+        height: 15%;
+        top: 10px;
+        position: relative;
+        z-index: 20;
+    }
+
+    .rectangle{
+        position: absolute;
+        width: 1000px;
+        height: 180px;
+        top: 0px;
+        left: 0px;
+        z-index: -10;
+        background:#04135c;
+    }
+
+    .h1_acesse_aq{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 400%;
+        text-align: center;
+        
+    }
+
+    .selecao{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 100%;
+        
+    }
+    .logoutLblPos{
+
+        position:fixed;
+        left:10px;
+        top:5px;
+
+    }
+
+    #submit2{
+        font-size: 20px;
+        padding: 10px 20px;
+
+    }
+
+
+    .container {
+        padding: 30px;
+        font-size: 270%;
+        color:#04135c;
+        font-family: 'Calibri Light';
+
+    }
+
+    input[type=text]{
+        width: 100%;
+        padding: 50px 10px;
+        margin: 0% 0%;
+        border-radius: 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        align-items: center;
+        align-self: center;
+        position: fixed;
+    }
+
+    #text2{
+        width: 910px;
+        height: 100px;
+        align-self: center;
+        padding: 9px 1px;
+        font-size: 200%;
+        position: fixed;
+    } 
+
+    #submit2{
+        font-size: 30px;
+        width: auto;
+        padding: 25px 30px;
+        border-radius: 30px;
+        background-color: hsl(221, 29%, 41%);
+        color: white;
+    }
+
+    #submit3{
+        font-size: 30px;
+        width: auto;
+        padding: 25px 30px;
+        border-radius: 30px;
+        background-color: hsl(221, 29%, 41%);
+        color: white;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav_size {
+        width: 100%;
+        height: 10%;
+    }
+
+    .nav_logo_size{
+        width: 30%;
+        height: 30%;
+    }
+
+    .font_size{
+        font-size: 200%;
+        margin-left: -10%;
+    }
+    .img2 {
+    float: right;
+    width: 10%;
+    height: 10%;
+    top: 0px;
+    position: relative;
+    z-index: 20;
+    }
+
+    .rectangle{
+        position: relative;
+        width: 0%;
+        height: 0%;
+        top: 0px;
+        left: 0px;
+        z-index: -10;
+        background:white;
+    }
+
+    .h1_acesse_aq{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 200%;
+        margin-top: 0%;
+        text-align: center;
+        
+    }
+
+    .selecao{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 100%;
+        
+    }
+    .logoutLblPos{
+        left:10px;
+        top:5px;
+
+    }
+
+    #submit2{
+        font-size: 20px;
+        padding: 10px 20px;
+
+    }
+
+
+    .container {
+        padding: 30px;
+        font-size: 270%;
+        color:#04135c;
+        font-family: 'Calibri Light';
+
+    }
+
+    input[type=text]{
+        width: 100%;
+        padding: 50px 10px;
+        margin: 0% 0%;
+        border-radius: 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        align-items: center;
+        align-self: center;
+    }
+
+    #text2{
+        width: 910px;
+        height: 100px;
+        align-self: center;
+        padding: 9px 1px;
+        font-size: 200%;
+    } 
+
+    #submit2{
+        font-size: 30px;
+        width: auto;
+        padding: 25px 30px;
+        border-radius: 30px;
+        background-color: hsl(221, 29%, 41%);
+        color: white;
+    }
+
+    #submit3{
+        font-size: 30px;
+        width: auto;
+        padding: 25px 30px;
+        border-radius: 30px;
+        background-color: hsl(221, 29%, 41%);
+        color: white;
+    }
+}

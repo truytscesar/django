@@ -1,0 +1,34 @@
+<!-- my_template.html -->
+<html>
+    <body>
+        <table>
+            <tr>
+            <th>Name</th>
+            </tr>
+            {% for obj in my_objects %}
+            <tr>
+            <td>{{ obj.col1 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <tr>
+            <th>Date</th>
+            </tr>
+            {% for obj in my_objects %}
+            <p> {{ obj.col2}}</p>
+            {% endfor %}
+        </table>
+
+        <table>
+            <tr>
+            <th>Date_hj</th>
+            </tr>
+            {% for obj in my_objects %}
+            <p> {{ obj.col3}}</p>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+  

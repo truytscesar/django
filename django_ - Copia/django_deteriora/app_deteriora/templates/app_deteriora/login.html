@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_hiae.png' %}">
+		
+		<title> Login </title>
+		
+		<link rel="stylesheet" href="{% static 'login.css' %}">
+
+	</head>
+
+	<body>
+
+		<div id="rectangle"></div>
+		<div>
+			<img src="{% static 'logo_hiae.png' %}" alt="logo" class="img2">
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div class="div2">
+			<h1 class="h1_acesse_aq"> Acesse aqui </h1>
+		</div>
+		<div class="container">
+			{% if form.errors %}
+			<p class="error">Please correct the errors below.</p>
+			{% endif %}
+
+			<form method="post" action="{% url 'login' %}">
+				{% csrf_token %}
+				<label for="id_email">Email:</label>
+				<input type="email" name="email" id="id_email" placeholder="Entre com seu email">
+				<br>
+				<label for="password" placeholder="Entre com sua senha">Senha:</label>
+				<input type="password" name="password" id="password">
+				<br>
+				<button type="submit">Entrar</button>
+			</form>
+			
+			
+
+		</div>
+			<br>
+		<div class="container" style="background-color:#f1f1f1">
+			<span class="psw">  <a href="#">Esqueci minha senha</a></span>
+			<br>
+			<br>
+			<a class="link" tabindex="-1" aria-disabled="true" href="signup">
+				<input value= "Cadastre aqui" class="btn_cadastro" type="button">
+			</a>
+		</div>
+	</body>
+</html>

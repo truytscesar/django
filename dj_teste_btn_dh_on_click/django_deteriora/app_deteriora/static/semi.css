@@ -1,0 +1,161 @@
+@media (min-width: 600px) {
+    .nav_size {
+        width: 100%;
+        height: 15%;
+    }
+
+    .nav_logo_size{
+        width: 50%;
+        height: 50%;
+    }
+
+    .img2 {
+        float: right;
+        width: 15%;
+        height: 15%;
+        top: 10px;
+        position: relative;
+        z-index: 20;
+    }
+
+    #rectangle{
+        position: absolute;
+        width: 1000px;
+        height: 180px;
+        top: 0px;
+        left: 0px;
+        z-index: -10;
+        background:#04135c;
+    }
+
+    .h1_acesse_aq{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 500%;
+        text-align: center;
+    }
+
+    .login_neuro {
+        background-color: hsl(221, 29%, 41%);
+        border: none;
+        color: white;
+        padding: 5% 8%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 350%;
+        border-radius: 30px;
+        cursor: pointer;
+        left: 10%;
+        position: fixed;
+    }
+
+    .login_coro {
+        background-color: hsl(221, 29%, 41%);
+        border: none;
+        color: white;
+        padding: 5% 10%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 350%;
+        border-radius: 30px;
+        cursor: pointer;
+        right: 10%;
+        position: fixed;
+    }
+
+    .acao {
+        font-size: 40px;
+        padding: 25px 30px;
+        background-color: #f44336;
+        border: none;
+        color: white;
+        left: 35%;
+        font-size: 350%;
+        padding: 5% 10%;
+        border-radius: 30px;
+        position: fixed;
+    }
+}
+
+@media (min-width: 1200px) {    
+    .nav_size {
+        width: 100%;
+        height: 10%;
+    }
+
+    .nav_logo_size{
+        width: 30%;
+        height: 30%;
+    }
+
+    .font_size{
+        font-size: 200%;
+        margin-left: -10%;
+    }
+    .img2 {
+    float: right;
+    width: 10%;
+    height: 10%;
+    top: 0px;
+    position: relative;
+    z-index: 20;
+    }
+
+    #rectangle{
+        width: 0%;
+        }
+
+    .div2 {
+        margin-top: -12%;
+    }
+    
+
+    .h1_acesse_aq{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 200%;
+        text-align: center;
+      }
+
+    .login_neuro {
+        background-color: hsl(221, 29%, 41%);
+        border: none;
+        color: white;
+        padding: 2% 2%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 200%;
+        border-radius: 30px;
+        cursor: pointer;
+        left: 20%;
+        width: 20%;
+    }
+
+    .login_coro {
+        background-color: hsl(221, 29%, 41%);
+        border: none;
+        color: white;
+        padding: 2% 2%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 200%;
+        border-radius: 30px;
+        cursor: pointer;
+        left: 60%;
+        width: 20%;
+    }
+
+    .acao {
+        background-color: #f44336;
+        border: none;
+        color: white;
+        font-size: 200%;
+        border-radius: 30px;
+        width: 60%;
+        height: 5%;
+        padding-top: 2%;
+        margin-left: -15%;
+    }
+}
