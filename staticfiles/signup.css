@@ -1,0 +1,246 @@
+ @media (min-width: 600px) {
+    .img2 {
+        float: right;
+        width: 15%;
+        height: 15%;
+        top: 10px;
+        position: relative;
+        z-index: 20;
+
+    }
+
+    #rectangle{
+        position: absolute;
+        width: 1000px;
+        height: 180px;
+        top: 0px;
+        left: 0px;
+        z-index: -10;
+        background:#04135c;
+    }
+
+    * {box-sizing: border-box}
+    form {
+        border: 8px solid #f1f1f1;
+    }
+        /* Add padding to containers */
+        .container {
+        padding: 16px;
+        }
+
+
+        /* Overwrite default styles of hr */
+        hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 20px;
+        }
+
+        /* Full-width inputs */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 50px 20px;
+            margin: 0% 0%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            align-items: center;
+            align-self: center;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+            background-color: hsl(221, 29%, 41%);
+            color: white;
+            padding: 30px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 30px;
+        }
+        
+        /* Add a hover effect for buttons */
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        /* Extra style for the cancel button (red) */
+        .cancelbtn {
+            font-size: 40px;
+            width: auto;
+            padding: 25px 30px;
+            background-color: #f44336;
+        }
+        
+        .conectado{
+            font-size: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 30px;
+            font-size: 200%;
+            color:#04135c;
+            font-family: 'Calibri Light';
+
+        }
+        
+        /* The "Forgot password" text */
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        
+        .login {
+            background-color: hsl(221, 29%, 41%);
+            border: none;
+            color: white;
+            padding: 5% 5%;
+            text-decoration: none;
+            text-align: center;
+            font-size: 350%;
+            margin: 4px 2px;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: center;
+            position: fixed;
+            left: 25%
+            
+        }
+        input {
+            font-size: 90%;
+            }
+        }
+
+@media (min-width: 1200px) {
+    .img2 {
+        float: right;
+        width: 10%;
+        height: 10%;
+        top: 0px;
+        position: relative;
+        z-index: 20;
+    
+      }
+    
+      #rectangle{
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        top: 0px;
+        left: 0px;
+        z-index: -10;
+        background:white;
+        margin-top: -10%;
+      }
+    
+      .div2 {
+        margin-top: -30%;
+        margin-left: 2%;
+      }
+      .h1_acesse_aq{
+        font-style: normal;
+        font-family: 'Calibri Light';
+        color:#04135c;
+        font-size: 200%;
+        text-align: center;
+      }
+    
+      /* Bordered form */
+      form {
+        border: white;
+      }
+    
+      /* Full-width inputs */
+      input[type=text], input[type=password] {
+        width: 50%;
+        height: 0%;
+        padding: 1%;
+        margin: 2% 0%;
+        display: inline-block;
+        box-sizing: border-box;
+        align-items: center;
+        align-self: center;
+        font-size: 70%;
+      }
+    
+      /* Set a style for all buttons */
+      button {
+        background-color: hsl(221, 29%, 41%);
+        color: white;
+        cursor: pointer;
+        width: 7%;
+        height: 7%;
+        font-size: 70%;
+        padding: 1%;
+        border-radius: 10px;
+      }
+    
+      /* Add a hover effect for buttons */
+      button:hover {
+        opacity: 0.8;
+      }
+    
+      /* Extra style for the cancel button (red) */
+      .cancelbtn {
+        background-color: hsl(221, 29%, 41%);
+        color: white;
+        cursor: pointer;
+        width: 7%;
+        height: 7%;
+        font-size: 70%;
+        padding: 1%;  
+        background-color: #f44336;
+        border-radius: 10px;
+        margin-left: 30%;
+      }
+      .btn_cadastro {
+        background-color: hsl(221, 78%, 19%);
+        color: white;
+        cursor: pointer;
+        width: 15%;
+        height: 7%;
+        font-size: 70%;
+        padding: 1%;  
+        border-radius: 10px;
+        margin-left: 0%;
+      }
+      .conectado {
+        width: 1.5%;
+      }
+    
+      /* Add padding to containers */
+      .container {
+        padding: 0%;
+        font-size: 130%;
+        color:#04135c;
+        font-family: 'Calibri Light';
+        text-align: center;
+        margin-top: -5%;
+      }
+    
+      /* The "Forgot password" text */
+      span.psw {  
+        padding-top: 16px;
+        padding: 1%;  
+        margin-right: 30%;
+      }
+    
+      .login {
+        background-color: hsl(221, 68%, 25%);
+        color: white;
+        cursor: pointer;
+        width: 50%;
+        height: 10%;
+        font-size: 100%;
+        padding: 1%;    
+        float: left;
+        border-radius: 10px;
+        text-align: center;
+      }
+      
+    
+    }
+    

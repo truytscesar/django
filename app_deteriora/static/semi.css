@@ -74,7 +74,6 @@
         font-size: 350%;
         padding: 5% 10%;
         border-radius: 30px;
-        position: fixed;
     }
 }
 
@@ -146,16 +145,44 @@
         left: 60%;
         width: 20%;
     }
+    .lista_leitos {
+        text-align: center;
+    }
 
-    .acao {
+    .btn_acao {
         background-color: #f44336;
         border: none;
         color: white;
         font-size: 200%;
-        border-radius: 30px;
-        width: 60%;
-        height: 5%;
-        padding-top: 2%;
-        margin-left: -15%;
+        border-radius: 15px;
+        width: 20%;
+        text-align: center;
+        margin-left: 40%;
     }
+    .btn_acao:hover {
+        background-color: #840f07;
+        border: none;
+        color: white;
+        font-size: 200%;
+        border-radius: 15px;
+        width: 20%;
+        text-align: center;
+        margin-left: 40%;
+      }
+    .btn_acao:active {
+        background-color: #410804;
+        border: none;
+        color: white;
+        font-size: 200%;
+        border-radius: 15px;
+        width: 20%;
+        text-align: center;
+        margin-left: 40%;
+    }
+
+    .btn_semi_neuro {
+        margin-left: -5%;
+        position: relative;
+    }
+    
 }

@@ -1,45 +1,54 @@
-from django.shortcuts import render
-from django.http import request
-from django.contrib.auth.models import User
+# Carregar pacotes django
+# from django.http import request
+# from django.contrib.auth.models import User
+
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import FormView
-from django.views.generic.base import TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from .forms import MyUserCreationForm
-
-from django.shortcuts import redirect
-from datetime import datetime
-
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .forms import DataAtualForm, LeitosGraficosForm
-from .models import DataAtual, LeitosGraficos
+from django.contrib.staticfiles import finders
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
+# Carregar pacotes python
+# import csv
+
+from datetime import datetime
 import pandas as pd 
 import matplotlib.pyplot as plt
-import csv
-from django.contrib.staticfiles import finders
 import os
-from django.conf import settings
+from django.contrib.auth import views as auth_views
+from django.contrib.auth.decorators import login_required
 
-def inicial(request):
-    return render(request, 'app_deteriora/inicial.html')
+# Forms
+from .forms import MyUserCreationForm, MyUserCreationForm, DataAtualForm, LeitosGraficosForm
+
+# Models
+from .models import DataAtual, LeitosGraficos
 
 
-def signin(request):
-    return render(request, 'app_deteriora/signin.html')
 
-def neuro_grafico(request):
-    return render(request, 'app_deteriora/neuro_grafico.html')
-
-'''
+# Pagina signup
 def signup(request):
-    return render(request, 'app_deteriora/signup.html')
-'''
+    if request.method == 'POST':
+        form = MyUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return render(request, 'app_deteriora/signin.html', {'form': form})
+    else:
+        form = MyUserCreationForm()
+    return render(request, 'app_deteriora/signup.html', {'form': form})
 
+
+
+
+# Pagina semi
+@login_required
 @csrf_exempt
 def semi(request):
         form_date = DataAtualForm(request.POST or None)
@@ -51,44 +60,13 @@ def semi(request):
         return render(request, 'app_deteriora/semi.html',dados3)
 
 
-def coro(request):
-    return render(request, 'app_deteriora/coro.html')
 
-
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
-from .forms import MyUserCreationForm
-
-def signup(request):
-    if request.method == 'POST':
-        form = MyUserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
-            return redirect('signin')
-    else:
-        form = MyUserCreationForm()
-    return render(request, 'app_deteriora/signup.html', {'form': form})
-
-def signin(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        username = authenticate(request, username=username, password=password)
-        if username is not None:
-            login(request, username)
-            messages.success(request, 'You have successfully signed in!')
-            return redirect('semi')
-    form = MyUserCreationForm()
-    return render(request, 'app_deteriora/signin.html', {'form': form})
-
+@login_required
 def my_view(request):
     my_objects = DataAtual.objects.all()
     return render(request, 'app_deteriora/my_template.html', {'my_objects': my_objects})
 
-
+@login_required
 def neuro(request):
     csv_path = finders.find('tbl_teste_.csv')
     df = pd.read_csv(csv_path, sep = ',')
@@ -169,8 +147,7 @@ def neuro(request):
         plt.xlabel("Data e hora da predição")
         plt.ylabel("Probabilidade de deterioração (%) ")
         plt.title("Probabilidades de deterioração do leito: {}".format(leito) + " da neuro")
-        plt.show()
-        plt.savefig(os.path.join(settings.BASE_DIR, 'app_deteriora', 'static', 'my_plot.png'))
+        plt.savefig('my_plot.png')
         return render(request, 'app_deteriora/neuro_grafico.html')
 
     context = {}
@@ -179,3 +156,11 @@ def neuro(request):
 
     return render(request, 'app_deteriora/neuro.html',context)
 
+@login_required
+def neuro_grafico(request):
+    return render(request, 'app_deteriora/neuro_grafico.html')
+
+# Pagina coro
+@login_required
+def coro(request):
+    return render(request, 'app_deteriora/coro.html')

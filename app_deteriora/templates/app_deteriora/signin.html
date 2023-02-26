@@ -6,14 +6,19 @@
 	<head>
 		<meta charset="utf-8">
 
-		<link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_hiae.png' %}">
 		
-		<title> Login </title>
+		
+		<title> Signin </title>
 		
 		<link rel="stylesheet" href="{% static 'signin.css' %}">
-
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_hiae.png' %}">
+				
 	</head>
 
+	
+
+	
+	
 	<body>
 
 		<div id="rectangle"></div>
@@ -53,6 +58,20 @@
 			  <label for="password">Senha:</label><br>
 			  <input  type="password" name="password" required> 
 			</div>
+			<style>
+				.alert {
+					color: red;
+				}
+			</style>
+			{% if form.errors %}
+			<div class="alert alert-danger">
+				{% for field, errors in form.errors.items %}
+					{% for error in errors %}
+						{{ error }}
+					{% endfor %}
+				{% endfor %}
+			</div>
+			{% endif %}	
 			<br>
 			<br>
 			<button class="btn_signin" type="submit">Sign in</button>
