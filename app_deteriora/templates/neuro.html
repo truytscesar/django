@@ -21,7 +21,7 @@
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light nav_size">
-			<a class="navbar-brand" href="">
+			<a class="navbar-brand" href="../semi">
 				<img class = "nav_logo_size" src="{% static 'logo_hiae.png' %}" alt="">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,17 +29,17 @@
 			</button>
 			<div class="collapse navbar-collapse font_size" id="navbarNav">
 			  <ul class="navbar-nav">
-				<li class="nav-item">
-				  <a class="nav-link" href="semi">Home</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link active" href="neuro">Neurologica <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="coro">Coronariana</a>
+				<li class="nav-item active">
+					<a class="nav-link" href="../semi">Home <span class="sr-only">(current)</span></a>
 				  </li>
 				<li class="nav-item">
-				  <a class="nav-link" href="">Sair</a>
+				  <a class="nav-link active" href="../neuro">Neurologica </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../coro">Coronariana</a>
+				  </li>
+				<li class="nav-item">
+					<a class="nav-link" href="../inicial">Sair</a>
 				</li>
 			  </ul>
 			</div>
@@ -52,19 +52,24 @@
 		<br>
 		<br>
 		<div>
-			<h1 class="h1_acesse_aq"> Gráfico </h1>
+			<h1 class="h1_acesse_aq"> Painel com as probabilidades de deterioração para todos os leitos da neuro </h1>
 		</div>
 	</div>
-	<style>
-	 .position_tbl {
- 
-		margin-left: 20%;
-	 }
-	</style>
-	<img src="{% static 'my_plot.png' %}">
-	<div>
-		<img src="{% static 'logo_hiae.png' %}" alt="logo" class="img2">
+
+	
+	<div class='table table-striped'>
+		<table class = 'position_tbl'>
+		{{ table_html|safe }}
+	</table>
 	</div>
+
+	<form method="post" action="{% url 'neuro' %}">
+		{% csrf_token %}
+		<label>Escolha um leito: </label>
+		 {{ form_graficos_neuro.leitos_graficos_neuro }} <br><br>
+		 <button type="submit" class="btn_acao">Ação</button>
+	  </form>
+	
 	</body>
 
 </html>

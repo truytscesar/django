@@ -10,7 +10,7 @@
 
 		<title> Semi Neuro </title>
 		
-		<link rel="stylesheet" href="{% static 'neuro_e_coro.css'%}">
+		<link rel="stylesheet" href="{% static 'neuro_coro_grafico.css'%}">
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,8 +20,8 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light nav_size">
-			<a class="navbar-brand" href="semi">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light nav_size ">
+			<a class="navbar-brand" href="">
 				<img class = "nav_logo_size" src="{% static 'logo_hiae.png' %}" alt="">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,16 +30,16 @@
 			<div class="collapse navbar-collapse font_size" id="navbarNav">
 			  <ul class="navbar-nav">
 				<li class="nav-item">
-				  <a class="nav-link" href="semi">Home</a>
+				  <a class="nav-link" href="../semi">Home</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link active" href="neuro">Neurologica <span class="sr-only">(current)</span></a>
+				  <a class="nav-link active" href="../neuro">Neurologica <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="coro">Coronariana</a>
+					<a class="nav-link" href="../coro">Coronariana</a>
 				  </li>
 				<li class="nav-item">
-					<a class="nav-link" href="inicial">Sair</a>
+				  <a class="nav-link" href="">Sair</a>
 				</li>
 			  </ul>
 			</div>
@@ -52,7 +52,7 @@
 		<br>
 		<br>
 		<div>
-			<h1 class="h1_acesse_aq"> Painel com as probabilidades de deterioração para todos os leitos da neuro </h1>
+			<h1 class="h1_acesse_aq"> Gráfico </h1>
 		</div>
 	</div>
 	<style>
@@ -61,18 +61,7 @@
 		margin-left: 20%;
 	 }
 	</style>
-	<div class='position_tbl table table-striped'>
-		
-		{{ table_html|safe }}
-	</div>
-
-	<form method="post" action="{% url 'neuro' %}">
-		{% csrf_token %}
-		<label>Leitos: </label>
-		 {{ form_graficos_neuro.leitos_graficos_neuro }} <br><br>
-		<input type="submit" value="Ação">
-	  </form>
-	
+	<img class="plot" src="{% static 'my_plot.png' %}">
 	</body>
 
 </html>
